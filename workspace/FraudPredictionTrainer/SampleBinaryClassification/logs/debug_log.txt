@@ -1,0 +1,30 @@
+Inferring Columns ...
+Creating Data loader ...
+Loading data ...
+Exploring multiple ML algorithms and settings to find you the best model for ML task: binary-classification
+For further learning check: https://aka.ms/mlnet-cli
+|     Trainer                              Accuracy      AUC    AUPRC  F1-score  Duration #Iteration             |
+[Source=AutoML, Kind=Trace] Channel started
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=OneHotEncoding{ col=type:type} xf=OneHotHashEncoding{ col=nameDest:nameDest} xf=ColumnConcatenating{ col=Features:type,nameDest,step,amount,oldbalanceOrg,newbalanceOrig,oldbalanceDest,newbalanceDest,isFlaggedFraud} xf=Normalizing{ col=Features:Features} tr=AveragedPerceptronBinary{}  cache=+
+[Source=AutoML, Kind=Trace] 1	0.999075178576747	00:01:43.2553205	xf=OneHotEncoding{ col=type:type} xf=OneHotHashEncoding{ col=nameDest:nameDest} xf=ColumnConcatenating{ col=Features:type,nameDest,step,amount,oldbalanceOrg,newbalanceOrig,oldbalanceDest,newbalanceDest,isFlaggedFraud} xf=Normalizing{ col=Features:Features} tr=AveragedPerceptronBinary{}  cache=+
+|1    AveragedPerceptronBinary               0.9991   0.9569   0.4341    0.4349     103.3          0             |
+[Source=AutoML, Kind=Trace] Evaluating pipeline xf=OneHotEncoding{ col=type:type} xf=OneHotHashEncoding{ col=nameDest:nameDest} xf=ColumnConcatenating{ col=Features:type,nameDest,step,amount,oldbalanceOrg,newbalanceOrig,oldbalanceDest,newbalanceDest,isFlaggedFraud} xf=Normalizing{ col=Features:Features} tr=SdcaLogisticRegressionBinary{}  cache=+
+
+===============================================Experiment Results=================================================
+------------------------------------------------------------------------------------------------------------------
+|                                                     Summary                                                    |
+------------------------------------------------------------------------------------------------------------------
+|ML Task: binary-classification                                                                                  |
+|Dataset: data.csv                                                                                               |
+|Label : isFraud                                                                                                 |
+|Total experiment time : 121.21 Secs                                                                             |
+|Total number of models explored: 1                                                                              |
+------------------------------------------------------------------------------------------------------------------
+|                                              Top 1 models explored                                             |
+------------------------------------------------------------------------------------------------------------------
+|     Trainer                              Accuracy      AUC    AUPRC  F1-score  Duration #Iteration             |
+|1    AveragedPerceptronBinary               0.9991   0.9569   0.4341    0.4349     103.3          1             |
+------------------------------------------------------------------------------------------------------------------
+Generated trained model for consumption: C:\Users\darra\source\repos\mldotnet-real-time-data-streaming-workshop\workspace\FraudPredictionTrainer\SampleBinaryClassification\SampleBinaryClassification.Model\MLModel.zip
+Generated C# code for model consumption: C:\Users\darra\source\repos\mldotnet-real-time-data-streaming-workshop\workspace\FraudPredictionTrainer\SampleBinaryClassification\SampleBinaryClassification.ConsoleApp
+Check out log file for more information: C:\Users\darra\source\repos\mldotnet-real-time-data-streaming-workshop\workspace\FraudPredictionTrainer\SampleBinaryClassification\logs\debug_log.txt
