@@ -1,4 +1,7 @@
-
+bin/
+obj/
+*.csv
+*.zip
 src/real-time-data-streaming/transaction-simulator/TransactionSimulator/.vs/TransactionSimulator/config/applicationhost.config
 src/real-time-data-streaming/transaction-simulator/TransactionSimulator/.vs/TransactionSimulator/v16/.suo
 src/real-time-data-streaming/transaction-simulator/TransactionSimulator/.vs/TransactionSimulator/v16/Server/sqlite3/db.lock
